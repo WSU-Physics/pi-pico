@@ -1,8 +1,7 @@
 # pi-pico
 Here are some activites for the Raspberry pi-pico.
 
-Top-level references: 
-Documentation and Resources
+Top-level references, documentation, and resources:
 -	Raspberry Pi Pico H from Adafruit.com https://www.adafruit.com/product/5525 
 -	Documentation from the Raspberry Pi Foundation https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html 
 -	Welcome to CircuitPython https://learn.adafruit.com/welcome-to-circuitpython
