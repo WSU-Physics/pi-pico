@@ -57,3 +57,37 @@ layout.add_content(L4, grid_position=(0, 3), cell_size=(1,1) )
 
 while (True) :
     pass
+
+'''
+# Here's a trimmed down version that also works.
+# pulling from 
+# https://docs.circuitpython.org/projects/displayio_ssd1306/en/latest/examples.html
+import board
+import busio
+import displayio
+import terminalio
+from adafruit_display_text import label
+from i2cdisplaybus import I2CDisplayBus
+
+import adafruit_displayio_ssd1306
+
+displayio.release_displays()
+
+i2c = busio.I2C(scl=board.GP21, sda=board.GP20)
+display_bus = I2CDisplayBus(i2c, device_address=0x3C)
+
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
+
+# Make the display context
+splash = displayio.Group()
+
+display.root_group = splash
+
+text = "Hello World!"
+text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=28, y=64 // 2 - 1)
+splash.append(text_area)
+
+while True:
+    pass
+
+'''
