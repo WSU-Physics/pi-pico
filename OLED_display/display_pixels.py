@@ -11,6 +11,8 @@
 #from board import SCL, SDA
 import board 
 import busio
+# Note, font5x8.bin seems to be missing from one of the libraries.  Including this 
+# file in the root directory seems to fix the problem.
 
 # Import the SSD1306 module.
 import adafruit_ssd1306
@@ -38,4 +40,6 @@ display.pixel(0, 0, 1)
 display.pixel(64, 16, 1)
 # Set a pixel in the opposite 127, 31 position.
 display.pixel(127, 31, 1)
+
+display.text("Potato, Poh-Tah-Toe", 5,20, 1)
 display.show()
